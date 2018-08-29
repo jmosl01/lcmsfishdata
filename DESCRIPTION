@@ -1,9 +1,12 @@
 Package: lcmsfishdata
-Title: A Collection of (Semi-)Processed LCMS Datasets
+Title: A Collection of (Semi)Processed LCMS Data Tables
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Authors@R: person("Jonathan","Mosley",comment = c(ORCID = "0000-0002-9300-6924"), 
+               email = "mosley.jonathan@epa.gov", role = c("aut","cre"))
+Description: A collection of LCMS data tables in various stages of processing for the purposes 
+  of illustrating LUMA functions.
 Depends: R (>= 2.10)
-License: What license is it under?
+License: CC0
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.0

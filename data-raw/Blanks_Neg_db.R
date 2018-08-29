@@ -11,31 +11,13 @@ if(!file.exists("data-raw/Blanks_Neg_db")) {
 peak_db <- connect_peakdb(file.base = "Blanks_Neg_db",
                           db.dir = "data-raw")
 
-RSQLite::dbListTables(peak_db)
+mynames <- RSQLite::dbListTables(peak_db)
+mynames <- mynames[1:(length(mynames)-2)]
 
-ann.tbl <- read_tbl(mytable = "Annotated",
-                    peak.db = peak_db)
 
-comb.tbl <- read_tbl(mytable = "Combined Isotopes and Adducts",
-                    peak.db = peak_db)
-
-CAMERA.tbl <- read_tbl(mytable = "From CAMERA",
-                    peak.db = peak_db)
-
-MF.tbl <- read_tbl(mytable = "From CAMERA with MinFrac",
-                       peak.db = peak_db)
-
-Trim.tbl <- read_tbl(mytable = "Trimmed by RT",
-                   peak.db = peak_db)
-
-pars.in.tbl <- read_tbl(mytable = "input_parsed",
-                     peak.db = peak_db)
-
-pars.out.tbl <- read_tbl(mytable = "output_parsed",
-                     peak.db = peak_db)
-
-Blanks.db <- list(ann.tbl,comb.tbl,CAMERA.tbl,MF.tbl,Trim.tbl,pars.in.tbl,pars.out.tbl)
-
-save(Blanks.db, file = "data/Blanks_Neg.rda")
+Blanks_Neg_db <- lapply(mynames, function(x) read_tbl(x, peak.db = peak_db))
+temp <- gsub(" ", "_", mynames)
+names(Blanks_Neg_db) <- temp
+save(Blanks_Neg_db, file = "data/Blanks_Neg_db.rda")
 
 dbDisconnect(peak_db)

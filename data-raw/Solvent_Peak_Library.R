@@ -18,8 +18,8 @@ lib.neg <- read_tbl(mytable = "Neg_list",
 lib.pos <- read_tbl(mytable = "Pos_list",
                     peak.db = lib_db)
 
-Solv.library <- list(lib.neg,lib.pos)
+Solvent_Peak_Library <- list(lib.neg,lib.pos)
 
-save(Solv.library, file = "data/Solvent_Peak_Library.rda")
+save(Solvent_Peak_Library, file = "data/Solvent_Peak_Library.rda")
 
 dbDisconnect(lib_db)

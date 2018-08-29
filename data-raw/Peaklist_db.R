@@ -11,31 +11,13 @@ if(!file.exists("data-raw/Peaklist_db")) {
 peak_db <- connect_peakdb(file.base = "Peaklist_db",
                           db.dir = "data-raw")
 
-RSQLite::dbListTables(peak_db)
+mynames <- RSQLite::dbListTables(peak_db)
+mynames <- mynames[-grep("sqlite",mynames)]
 
-final.tbl <- read_tbl(mytable = "Peaklist_Combined_FINAL",
-                    peak.db = peak_db)
 
-comb.tbl <- read_tbl(mytable = "Peaklist_Combined_with Duplicate IDs",
-                    peak.db = peak_db)
-
-neg.solv.tbl <- read_tbl(mytable = "Peaklist_Neg_Solvent Peaks Only",
-                    peak.db = peak_db)
-
-neg.peak.tbl <- read_tbl(mytable = "Peaklist_Neg_Solvent Peaks Removed",
-                       peak.db = peak_db)
-
-norm.tbl <- read_tbl(mytable = "Peaklist_Normalized",
-                     peak.db = peak_db)
-
-pos.solv.tbl <- read_tbl(mytable = "Peaklist_Pos_Solvent Peaks Only",
-                     peak.db = peak_db)
-
-pos.peak.tbl <- read_tbl(mytable = "Peaklist_Pos_Solvent Peaks Removed",
-                   peak.db = peak_db)
-
-Peaklist.db <- list(final.tbl,comb.tbl,neg.solv.tbl,neg.peak.tbl,norm.tbl,pos.solv.tbl,pos.peak.tbl)
-
-save(Peaklist.db, file = "data/Peaklist.rda")
+Peaklist_db <- lapply(mynames, function(x) read_tbl(x, peak.db = peak_db))
+temp <- gsub(" ", "_", mynames)
+names(Peaklist_db) <- temp
+save(Peaklist_db, file = "data/Peaklist_db.rda")
 
 dbDisconnect(peak_db)

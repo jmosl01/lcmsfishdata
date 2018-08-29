@@ -18,8 +18,8 @@ lib.neg <- read_tbl(mytable = "Annotated Library_Neg",
 lib.pos <- read_tbl(mytable = "Annotated Library_Pos",
                     peak.db = lib_db)
 
-Ann.library <- list(lib.neg,lib.pos)
+Annotated_Library <- list(lib.neg,lib.pos)
 
-save(Ann.library, file = "data/Annotated_Library.rda")
+save(Annotated_Library, file = "data/Annotated_Library.rda")
 
 dbDisconnect(lib_db)
