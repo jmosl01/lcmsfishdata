@@ -18,6 +18,6 @@ mynames <- mynames[1:(length(mynames)-2)]
 Blanks_Neg_db <- lapply(mynames, function(x) read_tbl(x, peak.db = peak_db))
 temp <- gsub(" ", "_", mynames)
 names(Blanks_Neg_db) <- temp
-save(Blanks_Neg_db, file = "data/Blanks_Neg_db.rda")
+devtools::use_data(Blanks_Neg_db, compress = "xz")
 
 dbDisconnect(peak_db)

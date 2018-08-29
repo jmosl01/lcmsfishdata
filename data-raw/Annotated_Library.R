@@ -20,6 +20,6 @@ lib.pos <- read_tbl(mytable = "Annotated Library_Pos",
 
 Annotated_Library <- list(lib.neg,lib.pos)
 
-save(Annotated_Library, file = "data/Annotated_Library.rda")
+devtools::use_data(Annotated_Library, compress = "xz")
 
 dbDisconnect(lib_db)

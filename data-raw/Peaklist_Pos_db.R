@@ -18,6 +18,6 @@ mynames <- mynames[-grep("sqlite",mynames)]
 Peaklist_Pos_db <- lapply(mynames, function(x) read_tbl(x, peak.db = peak_db))
 temp <- gsub(" ", "_", mynames)
 names(Peaklist_Pos_db) <- temp
-save(Peaklist_Pos_db, file = "data/Peaklist_Pos_db.rda")
+devtools::use_data(Peaklist_Pos_db, compress = "xz")
 
 dbDisconnect(peak_db)

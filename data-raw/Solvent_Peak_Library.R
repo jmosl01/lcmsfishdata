@@ -20,6 +20,6 @@ lib.pos <- read_tbl(mytable = "Pos_list",
 
 Solvent_Peak_Library <- list(lib.neg,lib.pos)
 
-save(Solvent_Peak_Library, file = "data/Solvent_Peak_Library.rda")
+devtools::use_data(Solvent_Peak_Library, compress = "xz")
 
 dbDisconnect(lib_db)
