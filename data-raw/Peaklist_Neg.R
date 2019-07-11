@@ -3,8 +3,8 @@ library(LUMA)
 
 if(!file.exists("data-raw/Peaklist_Neg")) {
   download.file(
-    "https://raw.githubusercontent.com/jmosl01/lcmsfishdata/master/data-raw/Peaklist_Neg_db",
-    "data-raw/Peaklist_Neg_db"
+    "https://raw.githubusercontent.com/jmosl01/lcmsfishdata/master/data-raw/Peaklist_Neg",
+    "data-raw/Peaklist_Neg"
   )
 }
 
@@ -15,9 +15,9 @@ mynames <- RSQLite::dbListTables(peak_db)
 mynames <- mynames[-grep("sqlite",mynames)]
 
 
-Peaklist_Neg_db <- lapply(mynames, function(x) read_tbl(x, peak.db = peak_db))
+Peaklist_Neg <- lapply(mynames, function(x) read_tbl(x, peak.db = peak_db))
 temp <- gsub(" ", "_", mynames)
-names(Peaklist_Neg_db) <- temp
-devtools::use_data(Peaklist_Neg_db, compress = "xz", overwrite = T)
+names(Peaklist_Neg) <- temp
+devtools::use_data(Peaklist_Neg, compress = "xz", overwrite = T)
 
 dbDisconnect(peak_db)
