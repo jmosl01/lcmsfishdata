@@ -1,0 +1,3 @@
+Script Directory	Data Directory	Ionization Mode	Analyze Blanks
+
+E:\ORD Backup\Users\jmosley\Desktop\WLSSD 2014 Livers\Data Processing\Scripts	E:\ORD Backup\Users\jmosley\Desktop\WLSSD 2014 Livers\mzML	Positive	FALSE

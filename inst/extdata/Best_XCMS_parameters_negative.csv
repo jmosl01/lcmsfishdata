@@ -1,0 +1,2 @@
+Peakwidth1,Peakwidth2,ppm,noise,snthresh,mzdiff,prefilter1,prefilter2,center,gapInit,bw,mzwid,minfrac
+5.4,42.5,14.8,5000,10,0.02267,5,10000,2,0.304,15,0.003,0.5
