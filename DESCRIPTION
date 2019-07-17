@@ -4,7 +4,7 @@ Version: 0.1.0
 Authors@R: person("Jonathan","Mosley",comment = c(ORCID = "0000-0002-9300-6924"), 
                email = "mosley.jonathan@epa.gov", role = c("aut","cre"))
 Description: A collection of LUMA data tables in various stages of processing for the purposes 
-  of illustrating LUMA functions.
+of illustrating LUMA functions.
 Depends: R (>= 2.10)
 License: CC0
 Encoding: UTF-8
