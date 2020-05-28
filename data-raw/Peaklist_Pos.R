@@ -1,10 +1,10 @@
 library(RSQLite)
 library(LUMA)
 
-if(!file.exists("data-raw/Peaklist_Pos")) {
+if(!file.exists("data-raw/Peaklist_Pos.SQLite")) {
   download.file(
-    "https://raw.githubusercontent.com/jmosl01/lcmsfishdata/master/data-raw/Peaklist_Pos",
-    "data-raw/Peaklist_Pos"
+    "https://raw.githubusercontent.com/jmosl01/lcmsfishdata/master/data-raw/Peaklist_Pos.SQLite",
+    "data-raw/Peaklist_Pos.SQLite"
   )
 }
 

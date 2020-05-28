@@ -1,14 +1,14 @@
 library(RSQLite)
 library(LUMA)
 
-if(!file.exists("data-raw/Blanks_Neg")) {
+if(!file.exists("data-raw/Blanks_Neg.SQLite")) {
   download.file(
-    "https://raw.githubusercontent.com/jmosl01/lcmsfishdata/master/data-raw/Blanks_Neg",
-    "data-raw/Blanks_Neg"
+    "https://raw.githubusercontent.com/jmosl01/lcmsfishdata/master/data-raw/Blanks_Neg.SQLite",
+    "data-raw/Blanks_Neg.SQLite"
   )
 }
 
-peak_db <- connect_peakdb(file.base = "Blanks_Neg",
+peak_db <- connect_peakdb(file.base = "Blanks_Neg.SQLite",
                           db.dir = "data-raw")
 
 mynames <- RSQLite::dbListTables(peak_db)

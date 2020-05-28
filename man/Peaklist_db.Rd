@@ -4,7 +4,8 @@
 \name{Peaklist_db}
 \alias{Peaklist_db}
 \title{Peaklist_db Tables}
-\format{list of tibbles
+\format{
+list of tibbles
 \describe{
 \item{Peaklist_Combined_FINAL}{A tibble: 717 x 147}
 \item{Peaklist_Combined_with_Duplicate_IDs}{A tibble: 772 x 147}
@@ -13,7 +14,8 @@
 \item{Peaklist_Normalized}{A tibble: 717 x 147}
 \item{Peaklist_Pos_Solvent_Peaks_Only}{A tibble: 36 x 144}
 \item{Peaklist_Pos_Solvent_Peaks_Removed}{A tibble: 454 x 144}
-}}
+}
+}
 \source{
 https://github.com/jmosl01/lcmsfishdata/blob/master/data-raw/Peaklist_db
 }

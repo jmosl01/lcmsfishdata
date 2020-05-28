@@ -4,7 +4,8 @@
 \name{Peaklist_Pos_db}
 \alias{Peaklist_Pos_db}
 \title{Peaklist_Pos_db Tables}
-\format{list of tibbles
+\format{
+list of tibbles
 \describe{
 \item{Annotated}{A tibble: 5,382 x 131}
 \item{Combined_Isotopes_and_Adducts}{A tibble: 819 x 141}
@@ -15,7 +16,8 @@
 \item{Trimmed_by_RT}{A tibble: 5,382 x 121}
 \item{input_parsed}{A tibble: 5,382 x 138}
 \item{output_parsed}{A tibble: 3,148 x 139}
-}}
+}
+}
 \source{
 https://github.com/jmosl01/lcmsfishdata/blob/master/data-raw/Peaklist_Pos
 }

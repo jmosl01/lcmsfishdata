@@ -4,7 +4,8 @@
 \name{Blanks_Neg_db}
 \alias{Blanks_Neg_db}
 \title{Blanks_Neg_db Tables}
-\format{list of tibbles
+\format{
+list of tibbles
 \describe{
 \item{Annotated}{A tibble: 826 x 59}
 \item{Combined_Isotopes_and_Adducts}{A tibble: 131 x 69}
@@ -13,7 +14,8 @@
 \item{Trimmed_by_RT}{A tibble: 826 x 49}
 \item{input_parsed}{A tibble: 826 x 66}
 \item{output_parsed}{A tibble: 349 x 67}
-}}
+}
+}
 \source{
 https://github.com/jmosl01/lcmsfishdata/blob/master/data-raw/Blanks_Neg
 }

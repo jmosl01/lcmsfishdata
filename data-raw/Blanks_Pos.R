@@ -1,10 +1,10 @@
 library(RSQLite)
 library(LUMA)
 
-if(!file.exists("data-raw/Blanks_Pos")) {
+if(!file.exists("data-raw/Blanks_Pos.SQLite")) {
   download.file(
-    "https://raw.githubusercontent.com/jmosl01/lcmsfishdata/master/data-raw/Blanks_Pos",
-    "data-raw/Blanks_Pos"
+    "https://raw.githubusercontent.com/jmosl01/lcmsfishdata/master/data-raw/Blanks_Pos.SQLite",
+    "data-raw/Blanks_Pos.SQLite"
   )
 }
 
