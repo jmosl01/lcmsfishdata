@@ -1,4 +1,4 @@
-#' @title Blanks_Pos_db Tables
+#' @title Blanks_Pos Tables
 #' 
 #' @description Tables generated from the Process Blanks in positive ionization mode
 #' @source https://github.com/jmosl01/lcmsfishdata/blob/master/data-raw/Blanks_Pos
@@ -13,5 +13,7 @@
 #' \item{output_parsed}{A tibble: 702 x 67}
 #' }
 #' @examples 
-#'  Blanks_Pos_db
-"Blanks_Pos_db"
+#' \dontrun{
+#'  Blanks_Pos
+#'  }
+"Blanks_Pos"

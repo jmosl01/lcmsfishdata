@@ -26,6 +26,8 @@ Peaklist_db
 Tables generated from Samples and Blanks in both ionization modes
 }
 \examples{
+\dontrun{
  Peaklist_db
+ }
 }
 \keyword{datasets}

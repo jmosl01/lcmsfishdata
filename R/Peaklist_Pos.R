@@ -1,4 +1,4 @@
-#' @title Peaklist_Pos_db Tables
+#' @title Peaklist_Pos Tables
 #' 
 #' @description Tables generated from the fish samples in positive ionization mode
 #' @source https://github.com/jmosl01/lcmsfishdata/blob/master/data-raw/Peaklist_Pos
@@ -15,5 +15,7 @@
 #' \item{output_parsed}{A tibble: 3,148 x 139}
 #' }
 #' @examples 
-#'  Peaklist_Pos_db
-"Peaklist_Pos_db"
+#' \dontrun{
+#'  Peaklist_Pos
+#'  }
+"Peaklist_Pos"

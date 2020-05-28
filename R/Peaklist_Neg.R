@@ -1,4 +1,4 @@
-#' @title Peaklist_Neg_db Tables
+#' @title Peaklist_Neg Tables
 #' 
 #' @description Tables generated from the fish samples in negative ionization mode
 #' @source https://github.com/jmosl01/lcmsfishdata/blob/master/data-raw/Peaklist_Neg
@@ -15,5 +15,7 @@
 #' \item{output_parsed}{A tibble: 1,587 x 139}
 #' }
 #' @examples 
-#'  Peaklist_Neg_db
-"Peaklist_Neg_db"
+#' \dontrun{
+#'  Peaklist_Neg
+#'  }
+"Peaklist_Neg"

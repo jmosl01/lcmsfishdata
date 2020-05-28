@@ -13,5 +13,7 @@
 #' \item{Peaklist_Pos_Solvent_Peaks_Removed}{A tibble: 454 x 144}
 #' }
 #' @examples 
+#' \dontrun{
 #'  Peaklist_db
+#'  }
 "Peaklist_db"

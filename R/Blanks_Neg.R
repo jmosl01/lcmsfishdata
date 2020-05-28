@@ -1,4 +1,4 @@
-#' @title Blanks_Neg_db Tables
+#' @title Blanks_Neg Tables
 #' 
 #' @description Tables generated from the Process Blanks in negative ionization mode
 #' @source https://github.com/jmosl01/lcmsfishdata/blob/master/data-raw/Blanks_Neg
@@ -13,5 +13,7 @@
 #' \item{output_parsed}{A tibble: 349 x 67}
 #' }
 #' @examples 
-#'  Blanks_Neg_db
-"Blanks_Neg_db"
+#' \dontrun{
+#'  Blanks_Neg
+#'  }
+"Blanks_Neg"
