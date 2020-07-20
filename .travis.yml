@@ -1,9 +1,19 @@
-# Sample .travis.yml for R projects.
-#
-# See README.md for instructions, or for more configuration options,
-# see the wiki:
-#   https://github.com/craigcitro/r-travis/wiki
-
+#Use R
 language: r
-cache: packages
-sudo: false
+cache:
+  - packages
+warnings_are_errors: false
+r_build_args: "--no-build-vignettes --no-manual"
+r_check_args: "--no-build-vignettes --no-manual --ignore-vignettes"
+dist: xenial
+os: linux
+
+r:
+ - oldrel
+ - release
+ - devel
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
